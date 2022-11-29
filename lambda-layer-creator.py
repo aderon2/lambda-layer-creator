@@ -3,8 +3,7 @@ import subprocess
 import shutil
 import sys
 
-sysVersion = sys.version_info
-pythonVersion = f'python{sysVersion.major}.{sysVersion.minor}'
+pythonVersion = f'python{sys.version_info.major}.{sys.version_info.minor}'
 dependencies = ['requests', 'beautifulsoup4'] # Modify this to whatever dependencies you want in the lambda layer
 layerBaseFolder = 'lambda-layer'
 layerFullPath = f'{layerBaseFolder}/python/lib/{pythonVersion}/site-packages'
