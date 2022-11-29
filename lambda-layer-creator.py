@@ -5,7 +5,7 @@ import sys
 
 sysVersion = sys.version_info
 pythonVersion = f'python{sysVersion.major}.{sysVersion.minor}'
-dependencies = ['requests', 'beautifulsoup4']
+dependencies = ['requests', 'beautifulsoup4'] # Modify this to whatever dependencies you want in the lambda layer
 layerBaseFolder = 'lambda-layer'
 layerFullPath = f'{layerBaseFolder}/python/lib/{pythonVersion}/site-packages'
 pipInstallCommand = [sys.executable, '-m', 'pip', 'install'] + dependencies + ['--target', layerFullPath]
